@@ -7,23 +7,21 @@
 //
 
 import UIKit
+import os.log
 
 class DebugUtility {
 
-    static let dateTimeForm = DateFormatter()
+    static let logger = OSLog(subsystem: "\(String(describing: Bundle.main.bundleIdentifier!))", category: "\(Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String)")
 
     static func printEnvironment() {
-        print("Environment : ")
-        print("\tmodule name = \(UIDevice.modelName)")
-        print("\tsystem name = \(UIDevice.current.systemName)")
-        print("\tsystem version = \(UIDevice.current.systemVersion)")
+        os_log("* Environment : model  = %s",  log: logger, type: .info, UIDevice.modelName)
+        os_log("* Environment : system = %s",  log: logger, type: .info, "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)")
     }
     
     static func printThisLocation(object: NSObject, function: String, line: Int) {
-        dateTimeForm.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        dateTimeForm.locale = Locale.current
+        let className = "\(String(describing: object).split(separator: ".")[1].split(separator: ":")[0])"
+        os_log("[%s] %s, line = %d",  log: logger, type: .info , className, function, line)
 
-        print("Called at \(dateTimeForm.string(from: Date())) : [\(String(describing: object).split(separator: ".")[1].split(separator: ":")[0])] " + function + ", line = \(line)")
     }
 }
 
