@@ -1,7 +1,8 @@
 # UILifecycle
 Print lifecycle status on console.
 
-![screen shot](https://github.com/63rabbits/UILifecycle/blob/master/UILifecycle-001.png)
+
+![screen shot2](https://github.com/63rabbits/UILifecycle/blob/master/UILifecycle-002.png)
 
 ## App Lifecycle
 
