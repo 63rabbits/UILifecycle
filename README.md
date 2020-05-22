@@ -9,3 +9,4 @@ Print lifecycle status on console.
 
 ![App Lifecycle](https://github.com/63rabbits/UILifecycle/blob/master/Lifecycle%20iOS13.png)
 
+![App Lifecycle](https://github.com/63rabbits/UILifecycle/blob/master/Lifecycle%20iOS12.png)
