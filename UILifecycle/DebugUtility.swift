@@ -18,9 +18,16 @@ class DebugUtility {
         os_log("* Environment : system = %s",  log: logger, type: .info, "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)")
     }
     
-    static func printThisLocation(object: NSObject, function: String, line: Int) {
+    static func printStateAndLocation(_ state: UIApplication.State, object: NSObject, function: String, line: Int) {
         let className = "\(String(describing: object).split(separator: ".")[1].split(separator: ":")[0])"
-        os_log("[%s] %s, line = %d",  log: logger, type: .info , className, function, line)
+        var stateString = ""
+        switch state {
+            case .active:       stateString = "Active"
+            case .background:   stateString = "Backgound"
+            case .inactive:     stateString = "Inactive"
+            default:            stateString = "Unknown"
+        }
+        os_log("<%-10s> (%-16s) %s, line = %d",  log: logger, type: .info , stateString, className, function, line)
 
     }
 }

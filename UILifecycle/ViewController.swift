@@ -19,23 +19,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
     override func viewWillLayoutSubviews() {
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
     override func viewDidLayoutSubviews() {
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
 
@@ -43,11 +43,11 @@ class ViewController: UIViewController {
 
 
     override func viewWillDisappear(_ animated: Bool) {
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
-        DebugUtility.printThisLocation(object: self, function: #function, line: #line)
+        DebugUtility.printStateAndLocation(UIApplication.shared.applicationState, object: self, function: #function, line: #line)
     }
 
 }
