@@ -1,5 +1,5 @@
 # UILifecycle
-Print lifecycle status on console.
+Logging lifecycle status and delegated method on console.
 
 ![screen shot1](https://github.com/63rabbits/UILifecycle/blob/master/UILifecycle-001.png)
 
